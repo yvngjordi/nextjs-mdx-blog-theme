@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from "next/link";
 import { formatDate } from "@/lib/formatDate";
 import type { MDXFrontMatter } from "@/lib/types";
@@ -9,8 +10,27 @@ interface PostListProps {
   posts: Array<MDXFrontMatter>;
 }
 
+const POSTS_PER_PAGE = 5;
+
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const maxPage = Math.ceil(posts.length / POSTS_PER_PAGE);
+
+  const currentPosts = posts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  );
+
+  const goToPreviousPage = () => {
+    setCurrentPage((page) => Math.max(page - 1, 1));
+  };
+
+  const goToNextPage = () => {
+    setCurrentPage((page) => Math.min(page + 1, maxPage));
+  };
+
   return (
+    <>
     <ul
       className={cx(
         "divide-y -my-8",
@@ -18,9 +38,9 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
         "dark:divide-gray-700"
       )}
     >
-      {posts.map((post, index) => {
-        return (
-          <li className="py-8" key={index}>
+    {currentPosts.map((post, index) => {
+      return (
+        <li className="py-8" key={index}>
             <article>
               <time
                 className={cx(
@@ -57,5 +77,15 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
         );
       })}
     </ul>
+    <div className="flex justify-between mt-8 pt-8" style={{borderTop:'1px solid rgba(160,160,160,0.3)'}}>
+      <button onClick={goToPreviousPage} disabled={currentPage === 1}>
+        Previous
+      </button>
+      {posts.length} total posts
+      <button onClick={goToNextPage} disabled={currentPage === maxPage}>
+        Next page
+      </button>
+    </div>
+    </>
   );
 };

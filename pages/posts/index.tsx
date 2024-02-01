@@ -12,8 +12,8 @@ const Posts: NextPage<PostsProps> = ({ posts }) => {
   return (
     <>
       <Page
-        title="Posts"
-        description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        title="Spark Study Blog"
+        description="Read our latest news, discoveries and updates below."
       >
         <PostList posts={posts} />
       </Page>

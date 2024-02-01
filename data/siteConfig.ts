@@ -1,20 +1,19 @@
 import type { SiteConfig } from "@/lib/types";
 const siteConfig: SiteConfig = {
-  avatar: "/avatar.png",
-  siteUrl: "https://nextjs-mdx-blog-theme.vercel.app",
-  siteName: "Alex Carpenter",
+  avatar: "/logo.PNG",
+  siteUrl: "https://spark.study",
+  siteName: "Spark Study Blog",
   siteDescription:
-    "Starter template for a personal website blog, built with Next.js, MDX, and Tailwind CSS.",
+    "Spark Study blog page.",
   siteThumbnail: "/og-image.png",
   nav: [
     { label: "Posts", href: "/posts" },
     { label: "About", href: "/about" },
   ],
   social: {
-    github: "https://github.com/alexcarpenter",
-    twitter: "https://twitter.com/hyrbid_alex",
-    linkedin: "https://www.linkedin.com/in/imalexcarpenter/",
-    instagram: "https://www.instagram.com/alexcarp/",
+    twitter: "https://twitter.com/sparkstudy",
+    linkedin: "https://www.linkedin.com/in/company/sparkstudy/",
+    instagram: "https://www.instagram.com/sparkstudy/",
   },
 };
 export default siteConfig;

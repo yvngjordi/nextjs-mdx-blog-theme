@@ -39,6 +39,7 @@ export const Page: React.FC<PageProps> = ({
           property="og:image"
           content={`${siteConfig.siteUrl}${metaThumbnail}`}
         />
+        <link rel="shortcut icon" href="/logo.PNG" />
       </Head>
       <header
         className={cx(

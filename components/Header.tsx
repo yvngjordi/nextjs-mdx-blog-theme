@@ -44,6 +44,15 @@ export const Header: React.FC = () => {
               </li>
             );
           })}
+          <Link
+            href="https://spark.study"
+            className={cx(
+              "text-gray-500 hover:text-gray-900",
+              "dark:text-gray-400 dark:hover:text-gray-300"
+            )}
+          >
+            Spark Study
+          </Link>
         </ul>
       </nav>
     </header>
