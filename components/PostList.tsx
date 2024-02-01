@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from "next/link";
+import { useRouter } from 'next/router';
 import { formatDate } from "@/lib/formatDate";
 import type { MDXFrontMatter } from "@/lib/types";
 import { Prose } from "@/components/Prose";
@@ -15,6 +16,9 @@ const POSTS_PER_PAGE = 5;
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const maxPage = Math.ceil(posts.length / POSTS_PER_PAGE);
+  const router = useRouter();
+
+  const isRootPath = router.pathname === "/" || router.pathname === "";
 
   const currentPosts = posts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
@@ -28,7 +32,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
   const goToNextPage = () => {
     setCurrentPage((page) => Math.min(page + 1, maxPage));
   };
-
+  
   return (
     <>
     <ul
@@ -76,16 +80,28 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
           </li>
         );
       })}
-    </ul>
-    <div className="flex justify-between mt-8 pt-8" style={{borderTop:'1px solid rgba(160,160,160,0.3)'}}>
-      <button onClick={goToPreviousPage} disabled={currentPage === 1}>
-        Previous
-      </button>
-      {posts.length} total posts
-      <button onClick={goToNextPage} disabled={currentPage === maxPage}>
-        Next page
-      </button>
-    </div>
+      </ul>
+      <div className="mt-8 pt-4" style={{borderTop: '1px solid rgba(160,160,160,0.3)'}}>
+        {!isRootPath && (
+          <div className="flex justify-between">
+            <button
+              onClick={goToPreviousPage}
+              disabled={currentPage === 1}
+              style={{ opacity: currentPage === 1 ? 0.4 : 1 }}
+            >
+              Previous
+            </button>
+            {posts.length} total posts
+            <button
+              onClick={goToNextPage}
+              disabled={currentPage === maxPage}
+              style={{ opacity: currentPage === maxPage ? 0.4 : 1 }}
+            >
+              Next page
+            </button>
+          </div>
+        )}
+      </div>
     </>
   );
 };

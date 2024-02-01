@@ -28,7 +28,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <Link
             passHref
             href="/posts"
-            className="group inline-flex items-center gap-2 text-pink-600"
+            className="group inline-flex items-center gap-2 text-navy-600"
           >
             View more posts{" "}
             <ArrowRight
