@@ -60,7 +60,7 @@ const About: NextPage = () => {
             priority
           />
           <b>Vaelyn Luo</b>
-          <p style={{fontSize:'10pt'}}>Chief Operating Officer & CLO</p>
+          <p style={{fontSize:'10pt'}}>Chief of Operations & CLO</p>
           </span>
         </span>
         <span className="flex justify-center space-x-4">
