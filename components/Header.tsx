@@ -3,9 +3,17 @@ import Image from "next/image";
 import siteConfig from "@/data/siteConfig";
 import Link from "next/link";
 import { cx } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
+  const { theme } = useTheme();
+
+  const avatarLight = "/logo.PNG";
+  const avatarDark = "/logo-w.PNG";
+
+  const currentAvatar = theme === "dark" ? avatarDark : avatarLight;
+
   return (
     <header className="py-8 flex justify-between items-center">
       <Link href="/" className="font-bold">
@@ -13,7 +21,7 @@ export const Header: React.FC = () => {
           <span className="flex">
             <Image
               className="rounded-md"
-              src={siteConfig.avatar}
+              src={currentAvatar}
               width={48}
               height={48}
               alt={siteConfig.siteName}
