@@ -153,7 +153,7 @@ const About = () => {
         </Page>
         </div>
       </>
-    ) : isValidIndex ? (
+    ) : isValidIndex && selectedMember ? (
     <div className="mt-12">
       <Page
         title={`${selectedMember.name}'s Bio`}
