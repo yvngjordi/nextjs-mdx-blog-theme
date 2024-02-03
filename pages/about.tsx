@@ -31,7 +31,7 @@ const teamMembers = [
   },
 ];
 
-const About: NextPage = () => {
+const About = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
   const handleSelectMember = (member) => {
