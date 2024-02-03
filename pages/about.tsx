@@ -8,25 +8,25 @@ const teamMembers = [
   {
     name: "Jordan Trowell",
     title: "Managing Director & Head of Technology",
-    profilePicture: "/team/1.png",
+    profilePicture: "/team/1.PNG",
     bio: "Jordan leads our technology vision and has been instrumental in shaping the product. With a background in software engineering and a passion for educational tech, he's driven by the challenge of making learning accessible to everyone."
   },
   {
     name: "Vaelyn Luo",
     title: "Head of Regulatory & Business Operations",
-    profilePicture: "/team/2.png",
+    profilePicture: "/team/2.PNG",
     bio: "Vaelyn oversees operations, ensuring our projects align with our mission. Her expertise in law and commitment to operational excellence help us navigate the complexities of the educational sector."
   },
   {
     name: "Alex Gauthier",
     title: "Head of Marketing",
-    profilePicture: "/team/3.png",
+    profilePicture: "/team/3.PNG",
     bio: "Alex directs our marketing strategy, enhancing our presence and engagement with educators and institutions worldwide. His insights into digital marketing and commitment to our vision make him a pivotal part of our team."
   },
   {
     name: "Emile Gauthier",
     title: "Head of Networking",
-    profilePicture: "/team/4.png",
+    profilePicture: "/team/4.PNG",
     bio: "Emile's expertise in building partnerships has been key to our growth. His network within the educational and tech communities supports our mission of bringing innovative solutions to educators and students alike."
   },
 ];
@@ -72,7 +72,7 @@ const About: NextPage = () => {
                 <div className="flex items-center">
                   <Image
                     className="rounded-md"
-                    src="/team/1.png"
+                    src="/team/1.PNG"
                     width={74}
                     height={74}
                     alt="Jordan Trowell"
@@ -89,7 +89,7 @@ const About: NextPage = () => {
                 <div className="flex items-center">
                   <Image
                     className="rounded-md"
-                    src="/team/2.png"
+                    src="/team/2.PNG"
                     width={74}
                     height={74}
                     alt="Vaelyn Luo"
@@ -108,7 +108,7 @@ const About: NextPage = () => {
                 <div className="flex items-center">
                   <Image
                     className="rounded-md"
-                    src="/team/3.png"
+                    src="/team/3.PNG"
                     width={74}
                     height={74}
                     alt="Alex Gauthier"
@@ -125,7 +125,7 @@ const About: NextPage = () => {
                 <div className="flex items-center">
                   <Image
                     className="rounded-md"
-                    src="/team/4.png"
+                    src="/team/4.PNG"
                     width={74}
                     height={74}
                     alt="Emile Gauthier"
