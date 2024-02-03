@@ -32,15 +32,19 @@ const teamMembers = [
 ];
 
 const About = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
+  const [selectedMemberIndex, setSelectedMemberIndex] = useState<number | null>(null);
 
-  const handleSelectMember = (member: any) => {
-    setSelectedMember(member);
+  const handleSelectMember = (index: number) => {
+    setSelectedMemberIndex(index);
+  };
+
+  const handleNextMember = () => {
+    setSelectedMemberIndex(prevIndex => prevIndex !== null ? (prevIndex + 1) % teamMembers.length : 0);
   };
 
   return (
     <>
-      {selectedMember === null ? (
+    {selectedMemberIndex === null ? (
         <>
         <Page
           title="About Spark Study"
@@ -145,21 +149,34 @@ const About = () => {
       </>
     ) : (
       <div className="mt-12">
-          <Page title={`${selectedMember.name}'s Bio`} description={`Learn more about ${selectedMember.name}, a key member of our team.`}>
-            <Prose>
-              <div className="text-center">
-                <Image className="rounded-md inline-block" src={selectedMember.profilePicture} width={128} height={128} alt={selectedMember.name} priority />
-                <div><b>{selectedMember.name}</b></div>
-                <p style={{ fontSize: '12pt' }}>{selectedMember.title}</p>
-                <p>{selectedMember.bio}</p>
-                <button onClick={() => setSelectedMember(null)} className="mt-4 inline-block bg-gray-500 text-white py-1 px-3 rounded hover:bg-gray-600">
-                  ← Back
-                </button>
-              </div>
-            </Prose>
-          </Page>
-        </div>
-      )}
+        <Page
+          title={`${teamMembers[selectedMemberIndex].name}'s Bio`}
+          description={`Learn more about ${teamMembers[selectedMemberIndex].name}, a key member of our team.`}
+        >
+          <Prose>
+            <div className="text-center">
+              <Image
+                className="rounded-md inline-block"
+                src={teamMembers[selectedMemberIndex].profilePicture}
+                width={128}
+                height={128}
+                alt={teamMembers[selectedMemberIndex].name}
+                priority
+              />
+              <div><b>{teamMembers[selectedMemberIndex].name}</b></div>
+              <p style={{ fontSize: '12pt' }}>{teamMembers[selectedMemberIndex].title}</p>
+              <p>{teamMembers[selectedMemberIndex].bio}</p>
+              <button onClick={() => setSelectedMemberIndex(null)} className="inline-block bg-gray-500 text-white py-1 px-3 rounded hover:bg-gray-600">
+                ← Back
+              </button>
+              <button onClick={handleNextMember} className="inline-block bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600">
+                Next Member →
+              </button>
+            </div>
+          </Prose>
+        </Page>
+      </div>
+    )}
     </>
   );
 };
