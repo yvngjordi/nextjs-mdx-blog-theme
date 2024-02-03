@@ -34,7 +34,7 @@ const teamMembers = [
 const About = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
-  const handleSelectMember = (member) => {
+  const handleSelectMember = (member: any) => {
     setSelectedMember(member);
   };
 
