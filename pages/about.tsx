@@ -88,7 +88,7 @@ const About = () => {
                     alt="Jordan Trowell"
                     priority
                   />
-                  <button onClick={() => handleSelectMember(teamMembers[0])} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
+                  <button onClick={() => handleSelectMember(0)} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
                     Bio →
                   </button>
                 </div>
@@ -105,7 +105,7 @@ const About = () => {
                     alt="Vaelyn Luo"
                     priority
                   />
-                  <button onClick={() => handleSelectMember(teamMembers[1])} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
+                  <button onClick={() => handleSelectMember(1)} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
                     Bio →
                   </button>
                 </div>
@@ -124,7 +124,7 @@ const About = () => {
                     alt="Alex Gauthier"
                     priority
                   />
-                  <button onClick={() => handleSelectMember(teamMembers[2])} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
+                  <button onClick={() => handleSelectMember(2)} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
                     Bio →
                   </button>
                 </div>
@@ -141,7 +141,7 @@ const About = () => {
                     alt="Emile Gauthier"
                     priority
                   />
-                  <button onClick={() => handleSelectMember(teamMembers[3])} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
+                  <button onClick={() => handleSelectMember(3)} className="ml-4 py-2 px-4 rounded opacity-60 hover:opacity-100 transition-opacity duration-150">
                     Bio →
                   </button>
                 </div>
