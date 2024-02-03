@@ -31,6 +31,7 @@ const teamMembers = [
   },
 ];
 
+
 const About = () => {
   const [selectedMemberIndex, setSelectedMemberIndex] = useState<number | null>(null);
 
@@ -41,6 +42,11 @@ const About = () => {
   const handleNextMember = () => {
     setSelectedMemberIndex(prevIndex => prevIndex !== null ? (prevIndex + 1) % teamMembers.length : 0);
   };
+
+  // Ensure selectedMemberIndex is valid before rendering the bio
+  const isValidIndex = selectedMemberIndex !== null && selectedMemberIndex >= 0 && selectedMemberIndex < teamMembers.length;
+  const selectedMember = isValidIndex ? teamMembers[selectedMemberIndex] : null;
+
 
   return (
     <>
@@ -147,25 +153,26 @@ const About = () => {
         </Page>
         </div>
       </>
-    ) : (
-      <div className="mt-12">
-        <Page
-          title={`${teamMembers[selectedMemberIndex].name}'s Bio`}
-          description={`Learn more about ${teamMembers[selectedMemberIndex].name}, a key member of our team.`}
-        >
-          <Prose>
-            <div className="text-center">
-              <Image
-                className="rounded-md inline-block"
-                src={teamMembers[selectedMemberIndex].profilePicture}
-                width={128}
-                height={128}
-                alt={teamMembers[selectedMemberIndex].name}
-                priority
-              />
-              <div><b>{teamMembers[selectedMemberIndex].name}</b></div>
-              <p style={{ fontSize: '12pt' }}>{teamMembers[selectedMemberIndex].title}</p>
-              <p>{teamMembers[selectedMemberIndex].bio}</p>
+    ) : isValidIndex ? (
+    <div className="mt-12">
+      <Page
+        title={`${selectedMember.name}'s Bio`}
+        description={`Learn more about ${selectedMember.name}, a key member of our team.`}
+      >
+        <Prose>
+          <div className="text-center">
+            <Image
+              className="rounded-md inline-block"
+              src={selectedMember.profilePicture}
+              width={128}
+              height={128}
+              alt={selectedMember.name}
+              priority
+            />
+            <div><b>{selectedMember.name}</b></div>
+            <p style={{ fontSize: '12pt' }}>{selectedMember.title}</p>
+            <p>{selectedMember.bio}</p>
+            <div className="flex justify-around mt-4">
               <button onClick={() => setSelectedMemberIndex(null)} className="inline-block bg-gray-500 text-white py-1 px-3 rounded hover:bg-gray-600">
                 ← Back
               </button>
@@ -173,10 +180,14 @@ const About = () => {
                 Next Member →
               </button>
             </div>
-          </Prose>
-        </Page>
-      </div>
-    )}
+          </div>
+        </Prose>
+      </Page>
+    </div>
+  ) : (
+    <>
+    </>
+  )}
     </>
   );
 };
