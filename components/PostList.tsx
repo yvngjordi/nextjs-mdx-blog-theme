@@ -11,7 +11,7 @@ interface PostListProps {
   posts: Array<MDXFrontMatter>;
 }
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 4;
 
 export const PostList: React.FC<PostListProps> = ({ posts }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,7 +32,7 @@ export const PostList: React.FC<PostListProps> = ({ posts }) => {
   const goToNextPage = () => {
     setCurrentPage((page) => Math.min(page + 1, maxPage));
   };
-  
+
   return (
     <>
     <ul

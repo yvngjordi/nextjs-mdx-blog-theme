@@ -27,6 +27,15 @@ export const Header: React.FC = () => {
 
       <nav>
         <ul className="flex space-x-8">
+        <Link
+          href="https://spark.study"
+          className={cx(
+            "text-gray-500 hover:text-gray-900",
+            "dark:text-gray-400 dark:hover:text-gray-300"
+          )}
+        >
+        ← Home
+        </Link>
           {siteConfig.nav.map((item, index) => {
             const isActive = item.href === pathname;
             return (
@@ -44,15 +53,6 @@ export const Header: React.FC = () => {
               </li>
             );
           })}
-          <Link
-            href="https://spark.study"
-            className={cx(
-              "text-gray-500 hover:text-gray-900",
-              "dark:text-gray-400 dark:hover:text-gray-300"
-            )}
-          >
-            Spark Study
-          </Link>
         </ul>
       </nav>
     </header>
