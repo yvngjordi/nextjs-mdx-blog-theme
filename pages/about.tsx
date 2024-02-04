@@ -56,7 +56,7 @@ const About = () => {
           title="About Spark Study"
           description="Discover the vision, team, and mission behind Spark Study, your partner in transforming education."
         >
-        <div className="justify-center display-flex align-center">
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Image
           src="/shield.png"
           width={300}
