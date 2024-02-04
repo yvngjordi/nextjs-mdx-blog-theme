@@ -57,7 +57,7 @@ const About = () => {
           description="Discover the vision, team, and mission behind Spark Study, your partner in transforming education."
         >
         <Image
-          src="/team/shield.png"
+          src="/shield.png"
           width={300}
           height={300}
           alt="Spark Study AI for education"
