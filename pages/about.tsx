@@ -56,6 +56,7 @@ const About = () => {
           title="About Spark Study"
           description="Discover the vision, team, and mission behind Spark Study, your partner in transforming education."
         >
+        <div className="justify-center display-flex align-center">
         <Image
           src="/shield.png"
           width={300}
@@ -63,6 +64,7 @@ const About = () => {
           alt="Spark Study AI for education"
           priority
         />
+        </div>
         <Prose>
           <p>
             Founded in early 2023, Spark Study represents a collaborative vision for the future of education, brought to life by a diverse team deeply rooted in the fields of technology, language, and academic excellence. With most of our founders hailing from Canada, and a significant part of our team comprising native French speakers from Quebec, our identity is a mosaic of cultures and languages, including the unique overseas perspective of our Head of Regulatory & Business Operations, the former National Vice President of the NZISA (New Zealand International Students Association).
