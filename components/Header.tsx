@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
   const { pathname } = useRouter();
   const { theme } = useTheme();
 
-  const avatarLight = "/logo.PNG";
+  const avatarLight = "/shield.png";
   const avatarDark = "/logo-w.PNG";
 
   const currentAvatar = theme === "dark" ? avatarDark : avatarLight;
