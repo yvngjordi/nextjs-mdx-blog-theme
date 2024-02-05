@@ -1,6 +1,6 @@
 import type { SiteConfig } from "@/lib/types";
 const siteConfig: SiteConfig = {
-  avatar: "/logo.PNG",
+  avatar: "/shield.png",
   siteUrl: "https://spark.study",
   siteName: "Spark Study Blog",
   siteDescription:
