@@ -101,7 +101,7 @@ const About = () => {
           </p>
           <p>
           <b>
-            There is no better time than now.
+          There is no better time than now.
           </b>
           </p>
         </Prose>
