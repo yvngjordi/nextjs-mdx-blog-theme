@@ -57,26 +57,52 @@ const About = () => {
           description="Discover the vision, team, and mission behind Spark Study, your partner in transforming education."
         >
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width:'100%' }}>
-        <Image
-          src="/shield.png"
-          width={300}
-          height={300}
-          alt="Spark Study AI for education"
-          priority
-        />
+
         </div>
         <Prose>
           <p>
-            Founded in early 2023, Spark Study represents a collaborative vision for the future of education, brought to life by a diverse team deeply rooted in the fields of technology, language, and academic excellence. With most of our founders hailing from Canada, and a significant part of our team comprising native French speakers from Quebec, our identity is a mosaic of cultures and languages, including the unique overseas perspective of our Head of Regulatory & Business Operations, the former National Vice President of the NZISA (New Zealand International Students Association).
+            Spark Study was founded in 2023 by a team of young professionals who are deeply
+            passionate about transforming the education sector for future generation of students.
           </p>
           <p>
-            At Spark Study, we are driven by the conviction that education can be transformed through innovation and technology. Our mission is to enhance the learning experience for students around the globe, particularly focusing on language learners and international students. We understand the challenges and complexities of education regulation and are dedicated to navigating these with our partners to provide more accessible, supportive, and effective educational environments.
+            At Spark Study, we are driven by the conviction that education must be transformed
+            through innovation and technology to improve the learning experience of our digital-native
+            students. Our mission is to enhance the student experience around the globe, particularly
+            focusing on removing barriers for accessing student support, optimizing course offerings,
+            teaching and assessment.
           </p>
           <p>
-            Our approach is rooted in the belief that by lowering the workload and strain on educators, we can foster an atmosphere of excellence and care. The core of our company beats with a passion for supporting students in their educational journey, ensuring they receive the care and resources they need to thrive in this new day and age. From AI-driven tools that assist in mental health support and pastoral care to digital tutors and teachers that provide enhanced learning outside the classroom, we are at the forefront of educational and institutional innovation.
+            From AI-driven tools that assist in mental health support and pastoral care to digital tutors
+            and teachers that provide enhanced learning outside the classroom, we are at the forefront
+            of educational and institutional innovation. We empower institutions with the tools they
+            need to scale, whilst lowering the strain on educators. Together, we can help institutions
+            foster an atmosphere of excellence and care.
           </p>
           <p>
-            As we look to the future, we are excited about the possibilities that lie ahead. With a commitment to breaking down language barriers, enhancing student and faculty satisfaction, and even reducing dropout rates, Spark Study is poised to make a significant impact on the educational landscape. Join us as we embark on this journey to redefine what is possible in education, together.
+            Each member of our team has a unique education background that fuels our passion behind
+            Spark Study. Our team comprises of native French speakers from Quebec (Canada), first in
+            the family to enter higher education, migrant and international students. Our identity is a
+            mosaic of cultures and languages, as well as tertiary education perspectives from Austrasia
+            to North America.
+          </p>
+          <p>
+            Significantly, we also have tertiary education background, spanning from international
+            student advocacy to the management of multi-million-dollar tertiary education funding
+            projects. We understand the challenges and complexities of education regulation and are
+            dedicated to navigating these with our partners to provide more accessible, supportive, and
+            effective educational environments.
+          </p>
+          <p>
+            As we look to the future, we are excited about the possibilities that lie ahead. The global
+            pandemic has disrupted the education sector, but at the same time, it has also provided the
+            sector a renewed sense of urgency to adopt digital teaching platforms to enrich learning.
+            The momentum for innovation is growing. Together, we can make significant impact on the
+            education landscape.
+          </p>
+          <p>
+          <b>
+            There is no better time than now.
+          <b>
           </p>
         </Prose>
         </Page>
