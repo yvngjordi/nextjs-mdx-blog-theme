@@ -57,7 +57,13 @@ const About = () => {
           description="Discover the vision, team, and mission behind Spark Study, your partner in transforming education."
         >
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width:'100%' }}>
-
+        <Image
+          src="/shield.png"
+          width={300}
+          height={300}
+          alt="Spark Study AI for education"
+          priority
+        />
         </div>
         <Prose>
           <p>
@@ -101,7 +107,7 @@ const About = () => {
           </p>
           <p>
           <b>
-          There is no better time than now.
+            There is no better time than now.
           </b>
           </p>
         </Prose>
