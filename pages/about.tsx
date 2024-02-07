@@ -9,7 +9,7 @@ const teamMembers = [
     name: "Jordan Trowell",
     title: "Managing Director & Head of Technology",
     profilePicture: "/team/1.PNG",
-    bio: "Software engineering wunderkind and visionnaire, Jordan has a knack for presenting technology-driven solutions that are both elegant and user-friendly. He has honed his skills through founding his first start-up in web development and design when he was seventeen. He has a proven track record of being empathetic to customer needs and building solutions that they want. \n\n Inspired by the challenges he overcame during his education journey, Jordan co-founded Spark Study to make learning accessible to everyone and at all levels. \n\n At Spark Study, Jordan leads the team as well as our product development and engineering."
+    bio: "Highly ambitious and knowledgable software engineer, Jordan is a visionary with a knack for presenting technology-driven solutions that are elegant, helpful and user-friendly. From teaching himself animation when he was twelve to starting up his first agency when he was seventeen, he has a proven track record of being empathetic to customer needs and building the solutions that they want. \n\n Inspired by the challenges he overcame during his education journey, Jordan co-founded Spark Study to make learning accessible to everyone and at all levels. \n\n At Spark Study, Jordan leads the team as well as our product, branding and development."
   },
   {
     name: "Vaelyn Luo",
@@ -66,7 +66,7 @@ const About = () => {
         <Prose>
           <p>
             Spark Study was founded in 2023 by a team of young professionals who are deeply
-            passionate about transforming the education sector for future generation of students.
+            passionate about transforming the education sector for future generations of students.
           </p>
           <p>
             At Spark Study, we are driven by the conviction that education must be transformed
@@ -86,7 +86,7 @@ const About = () => {
             Each member of our team has a unique education background that fuels our passion behind
             Spark Study. Our team comprises of native French speakers from Quebec (Canada), first in
             the family to enter higher education, migrant and international students. Our identity is a
-            mosaic of cultures and languages, as well as tertiary education perspectives from Austrasia
+            mosaic of cultures and languages, as well as tertiary education perspectives from Australia
             to North America.
           </p>
           <p>
