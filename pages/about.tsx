@@ -9,26 +9,24 @@ const teamMembers = [
     name: "Jordan Trowell",
     title: "Managing Director & Head of Technology",
     profilePicture: "/team/1.PNG",
-    bio: "Jordan leads our technology vision and has been instrumental in shaping the product. With a background in software engineering and a passion for educational tech, he's driven by the challenge of making learning accessible to everyone."
+    bio: "Software engineering wunderkind and visionnaire, Jordan has a knack for presenting technology-driven solutions that are both elegant and user-friendly. He has honed his skills through founding his first start-up in web development and design when he was seventeen. He has a proven track record of being empathetic to customer needs and building solutions that they want. \n\n Inspired by the challenges he overcame during his education journey, Jordan co-founded Spark Study to make learning accessible to everyone and at all levels. \n\n At Spark Study, Jordan leads the team as well as our product development and engineering."
   },
   {
     name: "Vaelyn Luo",
     title: "Head of Regulatory & Business Operations",
     profilePicture: "/team/2.PNG",
-    bio: "Vaelyn oversees operations, ensuring our projects align with our mission. Her expertise in law and commitment to operational excellence help us navigate the complexities of the educational sector."
+    bio: "Vaelyn has spent close to a decade in the tertiary education sector in Oceania. She was part of the establishment team at the New Zealand International Students’ Association, lobbying successfully for improved wellbeing of international students in Australia and New Zealand, with their Australian counterpart. She managed multi-million-dollar tertiary education funding projects for the Crown, before starting her own management consultancy and subsequently, Spark Study. \n\n She currently helms Spark Study’s business operations, including corporate and regulatory matters. Her expertise helps us navigate the complexities of the education sector. She has a background in software development and law, a rare but highly useful combination. "
   },
   {
     name: "Alex Gauthier",
     title: "Head of Marketing",
     profilePicture: "/team/3.PNG",
-    bio: "Alex directs our marketing strategy, enhancing our presence and engagement with educators and institutions worldwide. His insights into digital marketing and commitment to our vision make him a pivotal part of our team."
-  },
+    bio: "Self-driven hustlers with his twin brother, Emile Gauthier, the Gauthier brothers are Spark Engine’s sales and marketing power engines. \n\n Alex directs our marketing strategy and manages our social media platforms to enhance our presence. He is also the first point of contact with educators and industry stakeholders. Well-versed in French and English, Alex connects seamlessly with our stakeholders in North America. \n\n His insights into digital marketing and commitment to our vision makes him a pivotal part of our team."},
   {
     name: "Emile Gauthier",
     title: "Head of Networking",
     profilePicture: "/team/4.PNG",
-    bio: "Emile's expertise in building partnerships has been key to our growth. His network within the educational and tech communities supports our mission of bringing innovative solutions to educators and students alike."
-  },
+    bio: "Prior to Spark Study, Emile and his twin brother, Alex Gauthier, founded their sales and marketing start-up in the Web3 space. Growing their Web3 community platform from zero to thousands of followers from scratch, they are gurus in organic engagement. \n\n Working in tandem with Alex, Emile provides useful customer insights and research into education and technology. His network within the education and tech communities supports our mission of bringing innovation to the sector."},
 ];
 
 
@@ -212,7 +210,7 @@ const About = () => {
             />
             <div><b>{selectedMember.name}</b></div>
             <p style={{ fontSize: '12pt' }}>{selectedMember.title}</p>
-            <p>{selectedMember.bio}</p>
+            <p style={{whiteSpace:'pre-line'}}>{selectedMember.bio}</p>
             <div className="flex justify-around mt-4">
               <button onClick={() => setSelectedMemberIndex(null)} className="inline-block bg-gray-500 text-white py-1 px-3 rounded hover:bg-gray-600">
                 ← Back
